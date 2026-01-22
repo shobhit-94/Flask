@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Welcome{{ name }} profile</h2>
+
+    <p>Subjects are {{ subjects }}</p>
+    <ul>
+      {% for sub in subjects %}
+      <li>{{ sub }}</li>
+      {% endfor %}
+    </ul>
+
+    {% if is_topper %}
+    <p>You are a topper</p>
+    {% else %}
+    <p>You need to work hard</p>
+    {% endif %}
+  </body>
+</html>

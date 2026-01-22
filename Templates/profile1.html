@@ -1,0 +1,21 @@
+{% extends "base.html" %} 
+
+{% block title %}Profile page{% endblock %}
+
+
+{%block content %} 
+
+<h2>Welcome {{ name }}</h2>
+<ul>
+    {% for sub in subjects  %}
+    <li>{{ sub }}</li>
+    {% endfor %}
+</ul>
+
+{% if is_topper  %}
+<p>{{ name }},You are a topper</p>
+{% else %}
+<p>{{ name }},you have to work hard</p>
+{% endif %}
+
+{% endblock %}
